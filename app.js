@@ -37,5 +37,15 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/register', function(req, res) {
+  res.render('register',{
+    title: 'Register'
+  });
+});
+
+app.post('/register', function(req, res) {
+  res.redirect('/');
+});
+
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
